@@ -35,7 +35,8 @@ public class BlogController {
         Model model
     ) {
         Post post = new Post(title, anons, full_text);
+        postRepository.save(post);
 
-        return "";
+        return "redirect:/blog";
     }
 }
